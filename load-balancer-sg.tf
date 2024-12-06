@@ -8,7 +8,7 @@ resource "aws_security_group" "alb_security_group" {
   }
 }
 
-resource "aws_vpc_security_group_ingress_rule" "alb_sg_ingress_rule" {
+resource "aws_vpc_security_group_ingress_rule" "vpc_ingress_rule" {
   security_group_id = aws_security_group.alb_security_group.id
   cidr_ipv4         = "0.0.0.0/0"
   from_port         = 80
@@ -16,7 +16,7 @@ resource "aws_vpc_security_group_ingress_rule" "alb_sg_ingress_rule" {
   to_port           = 80
 }
 
-resource "aws_vpc_security_group_egress_rule" "alb_sg_egress_rule" {
+resource "aws_vpc_security_group_egress_rule" "vpc_egress_rule" {
   security_group_id = aws_security_group.alb_security_group.id
   cidr_ipv4         = "0.0.0.0/0"
   ip_protocol       = "-1" # semantically equivalent to all ports
