@@ -5,7 +5,7 @@ resource "aws_launch_template" "launch_template" {
   key_name = "ansible-key-pair"
   network_interfaces {
     associate_public_ip_address = true
-    security_groups = [aws_security_group.asg_security_group.id]
+    security_groups = [aws_security_group.alb_security_group.id]
   }
   tag_specifications {
     resource_type = "instance"
