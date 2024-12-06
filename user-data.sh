@@ -5,4 +5,4 @@ apt update -y
 apt install -y apache2
 systemctl start apache2
 systemctl enable apache2
-echo "<h1>Hello World from $(hostname -f). Making a change</h1>" > /var/www/html/index.html
+echo "<h1>Hello World from $(hostname -f). changing file </h1>" > /var/www/html/index.html
