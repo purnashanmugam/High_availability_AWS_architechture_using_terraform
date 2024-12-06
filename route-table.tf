@@ -13,6 +13,6 @@ resource "aws_route_table_association" "pub-rt-asscociation-1" {
 }
 
 resource "aws_route_table_association" "pub-rt-asscociation-2" {
-  subnet_id      = aws_subnet.web-subnet1.id
+  subnet_id      = aws_subnet.web-subnet2.id
   route_table_id = aws_route_table.public-route-table.id
 }
