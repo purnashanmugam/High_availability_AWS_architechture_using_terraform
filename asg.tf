@@ -3,9 +3,9 @@ resource "aws_launch_template" "launch_template" {
   image_id      = "ami-0e2c8caa4b6378d8c"
   instance_type = "t2.micro"
   key_name = "ansible-key-pair"
-  vpc_security_group_ids = [aws_security_group.asg_security_group.id]
   network_interfaces {
     associate_public_ip_address = true
+    security_groups = [aws_security_group.asg_security_group.id]
   }
   tag_specifications {
     resource_type = "instance"
