@@ -1,10 +1,10 @@
-#High Availability AWS Infrastructure Project using Terraform
+High Availability AWS Infrastructure Project using Terraform
 ---
-##Project Description
+Project Description
 ---
 This project demonstrates the implementation of a high-availability infrastructure in AWS using Auto Scaling Groups (ASG) and Elastic Load Balancers (ELB) with Terraform. It includes the setup of a Virtual Private Cloud (VPC), subnets, an Internet Gateway (IG), and route tables. 
 
-##Key Features
+Key Features
 ---
 1) Auto Scaling Groups (ASG):
 Dynamically adjust the number of instances based on traffic patterns, ensuring optimal resource utilization and reliability.
@@ -21,7 +21,7 @@ Allows communication between the VPC and the public internet.
 7) Route Tables:
 Define routing rules to direct traffic within the VPC and to the Internet Gateway.
 
-##Prerequisites
+Prerequisites
 ---
 Before you begin, ensure you have the following:
 1) Install Terraform and AWS CLI
@@ -46,7 +46,7 @@ sudo apt update
 sudo apt-get install terraform
 ```
 ```
-#Install AWS cli using below commands
+Install AWS cli using below commands
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 
@@ -62,11 +62,11 @@ AWS Secret Access Key [None]: YOUR_SECRET_ACCESS_KEY
 Default region name [None]: us-east-1
 Default output format [None]: json
 ```
-##Terraform Configuration:
+Terraform Configuration:
 ---
 The Terraform configuration files with(*.tf) in this repository define the AWS resources and settings required to create the high availability infrastructure.
 
-##Steps:
+Steps:
 1) Installing required packages and AWS plugins using terrform providers
 2) Create VPC, subnets, internet gateway
 3) Create load balancer, target group, target group listener and security group
@@ -74,15 +74,15 @@ The Terraform configuration files with(*.tf) in this repository define the AWS r
 5) Create a launch template for provisioning EC2 instances
 6) Add user data in the template to install and start appache service in the ubuntu EC2 instances
 
-##Clone the Repository:
+Clone the Repository:
 ```
 https://github.com/purnashanmugam/High_availability_AWS_architechture_using_terraform.git
 ```
-##Initialize Terraform:
+Initialize Terraform:
 ```
 terraform init
 ```
-##Initialize Terraform:
+Initialize Terraform:
 ```
 terraform plan
 ```
